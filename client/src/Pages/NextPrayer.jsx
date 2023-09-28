@@ -85,11 +85,11 @@ const NextPrayer = () => {
         </div>
         <div className='text-black flex flex-wrap justify-center items-center'>
             {Object.entries(prayerTimes).map(([prayerName, time]) => (
-                <div key={prayerName} className={`bg-white py-2 px-4 mx-1 md:mx-1 my-1 rounded-lg w-1/2 md:w-1/4 flex justify-center ${prayerName.toLowerCase() === nextPrayer.toLowerCase() ? 'bg-lime-500 text-white' : ''}`}>
-                <strong className={`${prayerName.toLowerCase() === nextPrayer.toLowerCase() ? 'text-white' : ''}`}>{prayerName}:</strong> 
-                <span className={`${prayerName.toLowerCase() === nextPrayer.toLowerCase() ? 'text-white' : ''}`}>
-                    {time}
-                </span>
+                <div key={prayerName} className={` py-2 px-4 mx-1 md:mx-1 my-1 rounded-lg w-1/2 md:w-1/4 flex justify-center ${prayerName.toLowerCase() === nextPrayer.toLowerCase() ? 'bg-lime-500' : 'bg-white'}`}>
+                  <strong className={`${prayerName.toLowerCase() === nextPrayer.toLowerCase() ? 'text-white' : ''}`}>{prayerName}:</strong> 
+                  <span className={`${prayerName.toLowerCase() === nextPrayer.toLowerCase() ? 'text-white' : ''}`}>
+                      {time}
+                  </span>
                 </div>
             ))}
         </div>
