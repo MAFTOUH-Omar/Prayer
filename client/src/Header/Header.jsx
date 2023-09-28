@@ -40,7 +40,7 @@ const Header = () => {
                 </div>
                 <ul className={`md:flex ${open ? 'md:flex-col' : ''} md:items-center md:pb-0 pb-12 absolute md:static bg-black md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20' : 'top-[-490px]'} text-white`}>
                     <li className={`md:ml-8 font-mono md:my-0 my-7 ${open?"text-center":""}`}>
-                        <Link className={`mx-4 ${open ? 'block my-2' : 'inline-block'} capitalize font-semibold`} to={"/home"}>prayer time</Link>
+                        <Link className={`mx-4 ${open ? 'block my-2' : 'inline-block'} capitalize font-semibold`} to={"/"}>prayer time</Link>
                         <Link className={`mx-4 ${open ? 'block my-2' : 'inline-block'} capitalize font-semibold`} to={"/nextPrayer"}>next Prayer</Link>
                         <Link className={`mx-4 ${open ? 'block my-2' : 'inline-block'} font-semibold`} to={"/contact"}>Contact</Link>
                     </li>
@@ -53,7 +53,7 @@ const Header = () => {
             </div>
         </nav>
         <Routes>
-            <Route  path="/home" element={token ? <TimesCalandar/> : <GoogleAuth/>}/>
+            <Route  path="/" element={token ? <TimesCalandar/> : <GoogleAuth/>}/>
             <Route path='*' element={<NotFound/>}/>
             <Route path='/contact' element={token ? <Contact/> : <GoogleAuth/>}/>
             <Route path='/nextPrayer' element={token ?<NextPrayer/>:<GoogleAuth/>}/>
