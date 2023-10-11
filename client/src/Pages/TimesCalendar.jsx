@@ -81,7 +81,7 @@ const TimesCalendar = () => {
       <div className='text-white flex justify-center'>
         <h1 className='font-bold font-mono text-xl'>{timeNow} {dateNow}</h1>
       </div>
-      <div className='flex mt-4 justify-center'>
+      <div className='flex mt-4 justify-center flex-col md:flex-row px-6'>
         <input
           type='text'
           value={country}
@@ -90,7 +90,7 @@ const TimesCalendar = () => {
           onChange={getCountry}
           //value={country}
         />
-        <button className='flex items-center bg-white py-2 px-2 rounded-xl md:px-5' onClick={fetchPrayer}>
+        <button className='flex items-center mx-auto md:mx-0 mt-1 md:mt-0 bg-white py-1 md:py-2 px-8 rounded-xl md:px-5' onClick={fetchPrayer}>
             <Search />
         </button>
       </div>

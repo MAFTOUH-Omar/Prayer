@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import moment from 'moment/moment';
 import Loading from '../Pages/Loading';
-import MapPin from '../Icons/MapPin';
 import axios from 'axios';
 const NextPrayer = () => {
   const [loading,setLoading]=useState(false);
@@ -63,7 +61,7 @@ const NextPrayer = () => {
     fetchPrayerTimes();
     }, [country]);
   return (
-    <div className='flex flex-col h-screen justify-center items-center font-mono mx-10'>
+    <div className='flex flex-col h-screen justify-center items-center font-mono md:mx-10 md:mt-0 mt-28'>
         {
             loading && <Loading/>
         }
